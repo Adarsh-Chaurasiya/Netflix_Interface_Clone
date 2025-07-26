@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+
+}
+
+.main {
+    background-image: url(/Netflix\ assets/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.main .box {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 87vw;
+    margin: auto;
+    height: 60px;
+    padding-top: 16px;
+}
+
+
+nav img {
+    width: 150px;
+    filter: contrast(20);
+
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.detail {
+    position: relative;
+    z-index: 10;
+    color: rgb(254, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.detail> :first-child {
+    width: 90%;
+    max-width: 700px;
+    font-size: 3.6rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+.detail> :nth-child(2),
+.detail> :nth-child(3) {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+ input[type="email"] {
+    background-color: rgb(23, 23, 23, 0.8);
+    font-size: 16px;
+    margin-right: 5px;
+    border: 1px solid #bebbbb;
+    border-radius: 5px;
+    padding: 14px 10px;
+    width: 30vw;
+    max-width: 500px;
+    color: white;
+
+}
+
+input::placeholder {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.9px;
+}
+
+.btn {
+    padding: 3px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.lang {
+    font-size: 16px;
+    padding: 5px 35px;
+    font-weight: 500;
+    margin-right: 5px;
+    background-color: rgb(23, 23, 23, 0.8);
+    border: 1px solid #e1d8d8;
+    color: white;
+}
+
+.red-sm {
+    background-color: rgb(194, 15, 15);
+    color: white;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+}
+
+.red {
+    background-color: rgb(194, 15, 15);
+    color: white;
+    font-size: 1.5rem;
+    padding: 6px 15px 12px;
+    border: none;
+}
+
+
+/* 2nd part  */
+.highlight-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, rgba(232, 55, 55, 0.752), rgb(19, 19, 214));
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    z-index: 2;
+}
+
+
+section .trending-now {
+    margin: 40px 0px 20px 180px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.trending {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 35px;
+    padding: 15px;
+    margin: 0 175px
+}
+
+.trending img {
+    width: 180px;
+    height: 240px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.trending {
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.trending::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.number {
+    position: relative;
+    color: rgb(13, 0, 0);
+    -webkit-text-stroke: 2px white;
+    font-size: 111px;
+    font-weight: 700;
+    bottom: 20px;
+    left: 35px;
+    font-family: sans-serif;
+    background: transparent;
+    z-index: 2;
+}
+
+div .ten{
+    left: 60px;
+}
+
+div .ten10{
+   margin: 0 -56px;
+}
+
+.card {
+    position: relative;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.09);
+}
+
+/* 3rd part  */
+.reason {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.reason>h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid h3 {
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.grid-box {
+    position: relative;
+    border-radius: 12px;
+    min-height: 280px;
+    color: white;
+    background: linear-gradient(to bottom right, #01203d, #2b054b);
+    padding: 20px;
+    font-weight: 400;
+    overflow: hidden;
+    font-size: 14px;
+
+}
+
+.grid-box img {
+    position: absolute;
+    width: 60px;
+    right: 16px;
+    bottom: 20px;
+}
+
+/* 4rth part  */
+.feq h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 20px 170px 12px;
+}
+
+.feqbox {
+    display: flex;
+    background-color: #2d2d2d;
+    padding: 20px;
+    max-width: 76vw;
+    margin: 0 170px 10px;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.feqbox img {
+    width: 39px;
+     filter: brightness(0) invert(1)
+}
+
+.feqbox span {
+    color: white;
+}
+
+.feqbox:hover {
+    background-color: #494a4b;
+    transition: 0.3s;
+}
+.repet{
+        padding-left: 384px;
+}
+
+.repet input{
+    min-width: 600px;
+}
+.repet01{
+    color: white;
+        font-size: 1rem;
+    margin: 57px 86px 16px;
+    font-weight: 300;
+}
+
+/* 5th part  */
+footer{
+    color: white;
+    padding-top: 80px;
+}
+.ques{
+  padding: 0 0 20px 181px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    max-width: 75vw;
+    margin: auto;
+    column-gap: 50px;
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.footer-item a {
+    color: white;
+}
+
+.re-button{
+ padding:    52px 0px 30px 185px;
+}
+
+.india{
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 15px 185px 1px;
+}
+.discription{
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+      padding: 25px 185px 200px;
+}
+.discription a{
+    color: rgb(0, 166, 255);
+    font-weight: 500;
+}
+
+
+/* --------- Mobile Devices (max-width: 600px) --------- */
+@media only screen and (max-width: 600px) {
+    nav {
+        /* flex-direction: column; */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+
+    nav img {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .detail> :first-child {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+     input[type="email"] {
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .red {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+
+    section>h3 {
+        margin-left: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-box {
+        min-height: 180px;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .grid-box h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .grid-box img {
+        width: 40px;
+        bottom: 15px;
+        right: 12px;
+    }
+
+    .trending {
+        margin: 0 20px;
+        padding: 10px;
+         gap: 10px;
+    }
+
+    section .trending-now{
+            margin: 40px 0px 20px 20px;
+    }
+      .trending img {
+        width: 120px;
+        height: 150px;
+    }
+    
+    .number {
+        font-size: 60px;
+        bottom: 10px;
+        left: 15px;
+        -webkit-text-stroke: 1px white;
+    }
+
+    .feq h2 {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .feqbox {
+        margin: 0 20px 10px;
+        font-size: 18px;
+    }
+
+    .repet {
+        padding-left: 20px;
+    }
+
+    .repet input {
+        min-width: 100%;
+    }
+
+    .repet01 {
+        margin: 20px;
+    }
+
+    .ques {
+        padding: 0 20px 20px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        padding: 0 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+    }
+
+    .re-button {
+        padding: 30px 20px;
+    }
+
+    .india,
+    .discription {
+        padding: 10px 20px;
+    }
+
+    .discription {
+        padding-bottom: 100px;
+    }
+    
+
+}
+
+/* --------- Tablets / Laptops (min-width: 601px) and (max-width: 1024px) --------- */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav {
+        max-width: 90vw;
+    }
+
+         section .trending-now {
+        margin-left: 20px;
+    }
+
+
+    .detail> :first-child {
+        font-size: 2.8rem;
+        width: 80%;
+    }
+
+    .detail input[type="email"] {
+        width: 60vw;
+    }
+
+    .reason {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trending {
+        margin: 0 40px;
+    }
+
+    section>h3 {
+        margin-left: 40px;
+    }
+  .feq h2 {
+        margin: 20px 40px;
+        font-size: 22px;
+    }
+
+    .feqbox {
+        margin: 0 40px 10px;
+    }
+
+    .trending {
+        margin: 0 40px;
+    }
+
+    .repet {
+        padding-left: 100px;
+    }
+
+    .repet input {
+        min-width: 80%;
+    }
+
+    .repet01 {
+        margin: 40px 60px 20px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        padding: 0 40px;
+    }
+
+    .re-button {
+        padding: 40px 40px 20px;
+    }
+
+    .india,
+    .discription {
+        padding: 10px 40px;
+    }
+
+    .discription {
+        padding-bottom: 150px;
+    }
+
+}
+
+/* --------- Desktops and Large Screens (min-width: 1025px) --------- */
+@media only screen and (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+   .footer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trending {
+        margin: 0 175px;
+    }
+
+    .feqbox {
+        max-width: 76vw;
+        margin: 0 170px 10px;
+    }
+}
